@@ -10,9 +10,9 @@ SELECT
     COUNT(DISTINCT O.OrderID) AS OrderCount,
     SUM(OI.TotalPrice) AS revenue
 FROM
-    {{ ref('orders_stg')}} O
+    {{ ref('stg_oms__orders')}} O
 JOIN
-    {{ ref('orderitems_stg')}} OI ON O.OrderID = OI.OrderID
+    {{ ref('stg_oms__orderitems')}} OI ON O.OrderID = OI.OrderID
 GROUP BY
     O.OrderID ,
     O.OrderDate ,

@@ -37,10 +37,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    customer_revenue:
-      +schema: DBT_JMUGNOLO_DEV
-      customer_revenue:
-        +materialized: table
-      orders_fact:
-        +materialized: table
+    +schema: DBT_JMUGNOLO_DEV
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
 

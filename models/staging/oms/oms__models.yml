@@ -10,6 +10,12 @@ models:
         description: phone number of the customer
         tests:
           - string_not_empty
+      - name: address
+        description: the address of the customer
+        tests:
+          - not_null
+          - string_not_empty
+
   - name: orders_fact
     description: order data from order management system with major transformations
     columns:

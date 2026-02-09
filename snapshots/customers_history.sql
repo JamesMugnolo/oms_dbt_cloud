@@ -2,13 +2,13 @@
 
 {{
     config(
-        target_schema='DBT_SCGEMA_CONSUMPTION',
+        target_schema='DBT_JMUGNOLO_DEV',
         unique_key='CUSTOMERID',
         strategy='timestamp',
         updated_at='updated_at',
     )
 }}
 
-SELECT * FROM {{source('landing','customers')}}
+SELECT * FROM {{source('staging','customers')}}
 
 {% endsnapshot %}

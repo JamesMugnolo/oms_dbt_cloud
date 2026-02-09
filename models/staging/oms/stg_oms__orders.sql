@@ -17,4 +17,4 @@ SELECT
     Updated_at,
     current_timestamp as dbt_updated_at
 FROM
-        {{ source('landing','orders')}}
+        {{ source('staging','orders')}}
