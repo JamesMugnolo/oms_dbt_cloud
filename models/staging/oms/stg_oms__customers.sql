@@ -11,4 +11,4 @@ SELECT
     Updated_at,
     CONCAT(FirstName, ' ', Lastname) AS CustomerName
 FROM
-    {{ source('landing','customers') }}
+    {{ source('staging','customers') }}

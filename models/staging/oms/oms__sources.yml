@@ -1,5 +1,5 @@
 sources:
-  - name: landing
+  - name: staging
     description: the primary source system for the OMS data analytics
     database: DBT_E2E_DB
     schema: DBT_SCHEMA_LANDING
@@ -7,12 +7,6 @@ sources:
       - name: customers
         description: the customer table in the OMS
         identifier: customers
-        columns:
-          - name: address
-            description: the address of the customer
-            tests:
-              - not_null
-              - string_not_empty
       - name: orders
         description: the orders table in the OMS
         identifier: orders

@@ -7,4 +7,4 @@ SELECT
     Updated_at,
     Quantity * UnitPrice AS TotalPrice
 FROM
-        {{ source('landing','orderitems')}}
+        {{ source('staging','orderitems')}}
